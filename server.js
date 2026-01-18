@@ -8,15 +8,23 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+
+
+//Sandro
+const authRouter = require('./routes/auth');
+const cursosRouter = require('./routes/cursos');
+//usar las rutas Curso
+app.use('/api/auth',authRouter);
+app.use('/api/cursos',cursosRouter);
+
 //Importar Rutas
 const authRoutes = require('./routes/auth');
 const inscripcionesRoutes = require('./routes/inscripciones');
 
-//Rutas
+//Rutas Juan
 app.use('/api/auth', authRoutes);
 app.use('/api/inscripciones', inscripcionesRoutes);
 
-//ruta de ejemplo
 app.get('/', (req, res) => {
     res.send('Hola desde el servidor Express');
 });
