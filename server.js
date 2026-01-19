@@ -25,6 +25,16 @@ const inscripcionesRoutes = require('./routes/inscripciones');
 app.use('/api/auth', authRoutes);
 app.use('/api/inscripciones', inscripcionesRoutes);
 
+//Luis
+//Importar rutas
+const authRoutes = require('./routes/auth');
+const estudiantesRoutes = require('./routes/estudiantes');
+
+
+//Rutas Luis
+app.use('/api/auth', authRoutes);
+app.use('/api/estudiantes', estudiantesRoutes);
+
 
 
 //Importar Rutas Dayana Intriago
