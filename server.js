@@ -34,7 +34,15 @@ const profesoresRoutes = require('./routes/profesores');
 app.use('/api/profesores', profesoresRoutes);
 
 
-//ruta de ejemplo
+//Rutas de Loor
+const authRoutes = require('./routes/auth');
+const estudiantesRoutes = require('./routes/estudiantes');
+
+
+//Rutas
+app.use('/api/auth', authRoutes);
+app.use('/api/estudiantes', estudiantesRoutes);
+
 
 app.get('/', (req, res) => {
     res.send('Hola desde el servidor Express');
