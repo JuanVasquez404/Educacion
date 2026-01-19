@@ -25,6 +25,19 @@ const inscripcionesRoutes = require('./routes/inscripciones');
 app.use('/api/auth', authRoutes);
 app.use('/api/inscripciones', inscripcionesRoutes);
 
+feature/modulo-cursos
+
+
+
+//Importar Rutas Dayana Intriago
+const profesoresRoutes = require('./routes/profesores');
+
+//Rutas Dayana Intriago
+app.use('/api/profesores', profesoresRoutes);
+
+
+//ruta de ejemplo
+main
 app.get('/', (req, res) => {
     res.send('Hola desde el servidor Express');
 });
